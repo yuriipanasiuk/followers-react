@@ -6,17 +6,13 @@ import Box from 'components/Box';
 import { Wraper, FollowersCount, Title } from './Followers.styled';
 
 const Followers = () => {
-  const [count, setCount] = useState(() => {
-    const value = localStorage.getItem('count');
+  const [count, setCount] = useState(
+    () => JSON.parse(localStorage.getItem('count')) || 100500
+  );
 
-    return value !== null ? JSON.parse(value) : 100500;
-  });
-
-  const [title, setTitle] = useState(() => {
-    const value = localStorage.getItem('title');
-
-    return value !== null ? JSON.parse(value) : 'Follow';
-  });
+  const [title, setTitle] = useState(
+    () => JSON.parse(localStorage.getItem('title')) || 'Follow'
+  );
 
   useEffect(() => {
     localStorage.setItem('count', JSON.stringify(count));

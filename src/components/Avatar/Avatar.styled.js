@@ -21,3 +21,7 @@ export const Image = styled.div`
   width: 80px;
   height: 80px;
 `;
+
+export const Img = styled.img`
+  max-width: 100%;
+`;

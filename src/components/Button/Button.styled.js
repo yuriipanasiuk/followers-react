@@ -18,4 +18,10 @@ export const StyledButton = styled.button`
   color: ${p => p.theme.colors.buttonTitleColor};
 
   cursor: pointer;
+
+  transition: scale 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  :hover {
+    scale: 1.04;
+  }
 `;

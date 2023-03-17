@@ -1,4 +1,4 @@
-import { Image, Border, AvatarWraper } from './Avatar.styled';
+import { Image, Border, AvatarWraper, Img } from './Avatar.styled';
 import boy from '../../images/boy.png';
 
 const Avatar = () => {
@@ -6,7 +6,7 @@ const Avatar = () => {
     <AvatarWraper>
       <Border />
       <Image>
-        <img src={boy} alt="avatar" />
+        <Img src={boy} alt="avatar" />
       </Image>
     </AvatarWraper>
   );
